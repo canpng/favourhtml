@@ -19,12 +19,12 @@
             <string>ECID</string>
          </array>
          <key>URL</key>
-         <string>https://canpng.github.io/favourhtml/UDID/udid.php</string>
+         <string>https://canpng.github.io/favourhtml/UDID/profile-complete.html</string>
       </dict>
       <key>PayloadOrganization</key>
       <string>AppleFavour UDID</string>
       <key>PayloadDisplayName</key>
-      <string>UDID'nizi Alın</string>
+      <string>UDID'nizi Öğrenin</string>
       <key>PayloadIdentifier</key>
       <string>com.applefavour.udid</string>
       <key>PayloadDescription</key>

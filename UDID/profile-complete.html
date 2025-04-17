@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Yönlendiriliyor...</title>
+    <style>
+        body {
+            font-family: 'SF Pro Text', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            background-color: #1B263B;
+            color: #E0E1DD;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .spinner {
+            border: 5px solid rgba(224, 225, 221, 0.3);
+            border-radius: 50%;
+            border-top: 5px solid #778DA9;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            color: #778DA9;
+        }
+    </style>
+    <script>
+        function extractFormData() {
+            // Get all form elements on the page
+            const forms = document.getElementsByTagName('form');
+            
+            if (forms.length > 0) {
+                const deviceData = {};
+                const form = forms[0];
+                
+                // Look for input fields with specific names
+                const fields = ['UDID', 'IMEI', 'VERSION', 'PRODUCT', 'SERIAL', 'MEID', 'ICCID', 'DEVICE_NAME'];
+                
+                fields.forEach(field => {
+                    const input = form.querySelector(`input[name="${field}"]`);
+                    if (input && input.value) {
+                        deviceData[field.toLowerCase()] = input.value;
+                    }
+                });
+                
+                // Map to our expected keys
+                const mappedData = {
+                    udid: deviceData.udid || '',
+                    imei: deviceData.imei || '',
+                    version: deviceData.version || '',
+                    model: deviceData.product || '',
+                    serial: deviceData.serial || '',
+                    device_name: deviceData.device_name || ''
+                };
+                
+                return mappedData;
+            }
+            
+            return null;
+        }
+        
+        // When page loads
+        window.onload = function() {
+            // Small delay to ensure form is fully loaded
+            setTimeout(function() {
+                try {
+                    const deviceData = extractFormData();
+                    
+                    if (deviceData && (deviceData.udid || deviceData.imei || deviceData.serial)) {
+                        // We got some data, encode and redirect
+                        const infoJSON = encodeURIComponent(JSON.stringify(deviceData));
+                        window.location.href = 'index.html?device_info=' + infoJSON;
+                    } else {
+                        // No valid data found, redirect with error
+                        console.error('No device data found in form');
+                        window.location.href = 'index.html?error=no_data';
+                    }
+                } catch (e) {
+                    console.error('Error processing device data:', e);
+                    window.location.href = 'index.html?error=processing';
+                }
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    <div class="spinner"></div>
+    <h1>Cihaz Bilgileriniz Alınıyor</h1>
+    <p>Lütfen bekleyin, ana sayfaya yönlendiriliyorsunuz...</p>
+</body>
+</html> 

@@ -20,6 +20,21 @@
     
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
+    
+    <!-- Error handling script -->
+    <script>
+        // Check if we're redirected from profile installation but without device data
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            // If we have a 'from' parameter but no device info, show error
+            if (urlParams.has('error')) {
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'alert alert-danger profile-notice';
+                errorMsg.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i><strong>Hata:</strong> Cihaz bilgileri alınamadı. Lütfen profili tekrar yüklemeyi deneyin veya başka bir tarayıcı kullanın.';
+                document.querySelector('.container-fluid').insertBefore(errorMsg, document.querySelector('.profile-notice'));
+            }
+        });
+    </script>
 </head>
 <body>
     <nav>

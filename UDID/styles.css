@@ -296,44 +296,6 @@ footer {
     }
 }
 
-/* Animation for form elements */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.device-info-section .form-control {
-    animation: fadeIn 0.5s ease forwards;
-    animation-delay: calc(var(--animation-order) * 0.1s);
-    opacity: 0;
-}
-
-.device-info-section .mb-3:nth-child(1) {
-    --animation-order: 1;
-}
-
-.device-info-section .mb-3:nth-child(2) {
-    --animation-order: 2;
-}
-
-.device-info-section .mb-3:nth-child(3) {
-    --animation-order: 3;
-}
-
-.device-info-section .mb-3:nth-child(4) {
-    --animation-order: 4;
-}
-
-.device-info-section .mb-3:nth-child(5) {
-    --animation-order: 5;
-}
-
 /* Highlight UDID Styling */
 .highlight-udid .input-group {
     box-shadow: 0 0 0 3px rgba(224, 225, 221, 0.3);
