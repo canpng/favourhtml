@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Inc//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+   <dict>
+      <key>PayloadContent</key>
+      <dict>
+         <key>DeviceAttributes</key>
+         <array>
+            <string>UDID</string>
+            <string>IMEI</string>
+            <string>MEID</string>
+            <string>ICCID</string>
+            <string>VERSION</string>
+            <string>PRODUCT</string>
+            <string>MAC_ADDRESS_EN0</string>
+            <string>DEVICE_NAME</string>
+            <string>SERIAL</string>
+            <string>IMSI</string>
+            <string>ECID</string>
+         </array>
+         <key>URL</key>
+         <string>https://applefavour.com/udid.php</string>
+      </dict>
+      <key>PayloadOrganization</key>
+      <string>AppleFavour UDID</string>
+      <key>PayloadDisplayName</key>
+      <string>UDID'nizi Alın</string>
+      <key>PayloadIdentifier</key>
+      <string>com.applefavour.udid</string>
+      <key>PayloadDescription</key>
+      <string>Mevcut cihazınızın UDID'sini bulmak ve görüntülemek için bu geçici profili yükleyin. UDID'nizi aldıktan hemen sonra otomatik olarak cihazdan kaldırılır.</string>
+      <key>PayloadType</key>
+      <string>Profile Service</string>
+      <key>PayloadUUID</key>
+      <string>cfbe4c38-43ca-4069-a625-1e993885a2ca</string>
+       <key>PayloadVersion</key>
+      <integer>1</integer>
+   </dict>
+</plist> 

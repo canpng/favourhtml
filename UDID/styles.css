@@ -1,0 +1,360 @@
+/* Color palette */
+:root {
+    --platinum: #E0E1DD;
+    --silver-lake-blue: #778DA9;
+    --yinmn-blue: #415A77;
+    --oxford-blue: #1B263B;
+    --rich-black: #0D1B2A;
+}
+
+/* Typography */
+body {
+    font-family: 'SF Pro Text', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    background-color: var(--oxford-blue);
+    color: var(--platinum);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--rich-black);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-title {
+    color: var(--platinum);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0;
+    background: linear-gradient(to right, var(--platinum), var(--silver-lake-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Profile Notice Alert */
+.profile-notice {
+    max-width: 768px;
+    margin: 1.5rem auto;
+    background-color: rgba(65, 90, 119, 0.3);
+    border: 1px solid var(--yinmn-blue);
+    color: var(--platinum);
+}
+
+/* Main Content */
+main {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.app-card {
+    background-color: var(--rich-black);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+    padding: 0 0 1rem 0;
+    border-bottom: 1px solid rgba(119, 141, 169, 0.2);
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+}
+
+.card-title {
+    color: var(--platinum);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.form-label {
+    color: var(--silver-lake-blue);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    background-color: var(--oxford-blue);
+    border: 1px solid var(--yinmn-blue);
+    color: var(--platinum);
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+/* Input group styling */
+.input-group {
+    display: flex;
+    position: relative;
+}
+
+.input-group .form-control {
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group .btn-copy {
+    flex: 0 0 auto;
+    width: 50px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-control:focus {
+    background-color: var(--oxford-blue);
+    color: var(--platinum);
+    border-color: var(--silver-lake-blue);
+    box-shadow: 0 0 0 0.25rem rgba(119, 141, 169, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--silver-lake-blue);
+    opacity: 0.7;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.primary {
+    background-color: var(--yinmn-blue);
+    color: var(--platinum);
+    border: none;
+}
+
+.btn.primary:hover, .btn.primary:focus {
+    background-color: var(--silver-lake-blue);
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: var(--platinum);
+    border: 1px solid var(--silver-lake-blue);
+}
+
+.btn.secondary:hover, .btn.secondary:focus {
+    background-color: rgba(119, 141, 169, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-copy {
+    background-color: var(--yinmn-blue);
+    color: var(--platinum);
+    border: none;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-copy:hover {
+    background-color: var(--silver-lake-blue);
+    color: var(--platinum);
+}
+
+/* Info Section */
+.section-title {
+    color: var(--platinum);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.section-text {
+    color: var(--silver-lake-blue);
+    margin: 1rem 0 1.5rem;
+    line-height: 1.7;
+}
+
+.usage-steps {
+    color: var(--silver-lake-blue);
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.usage-steps li {
+    margin-bottom: 0.8rem;
+}
+
+.usage-steps strong {
+    color: var(--platinum);
+}
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer p {
+    color: var(--silver-lake-blue);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.footer .fa-heart {
+    color: #ff4757;
+    margin: 0 0.25rem;
+}
+
+/* Toast Notification */
+.toast {
+    background-color: var(--yinmn-blue);
+    color: var(--platinum);
+    border: none;
+}
+
+.toast-body {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 576px) {
+    .nav-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    /* Ensure copy buttons maintain position */
+    .input-group {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .input-group .form-control {
+        flex: 1 1 auto;
+    }
+    
+    .input-group .btn-copy {
+        flex: 0 0 45px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .btn-copy i {
+        margin: 0;
+    }
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.device-info-section .form-control {
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: calc(var(--animation-order) * 0.1s);
+    opacity: 0;
+}
+
+.device-info-section .mb-3:nth-child(1) {
+    --animation-order: 1;
+}
+
+.device-info-section .mb-3:nth-child(2) {
+    --animation-order: 2;
+}
+
+.device-info-section .mb-3:nth-child(3) {
+    --animation-order: 3;
+}
+
+.device-info-section .mb-3:nth-child(4) {
+    --animation-order: 4;
+}
+
+.device-info-section .mb-3:nth-child(5) {
+    --animation-order: 5;
+}
+
+/* Highlight UDID Styling */
+.highlight-udid .input-group {
+    box-shadow: 0 0 0 3px rgba(224, 225, 221, 0.3);
+    border-radius: 8px;
+    animation: pulse 2s infinite;
+}
+
+.highlight-udid .form-control {
+    font-weight: bold;
+    color: var(--platinum);
+    background-color: rgba(65, 90, 119, 0.5);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(224, 225, 221, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(224, 225, 221, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(224, 225, 221, 0);
+    }
+}

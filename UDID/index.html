@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AppleFavour UDID</title>
+    
+    <!-- Favicon and Meta -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="description" content="Apple cihazınızın UDID ve diğer bilgilerini güvenle görüntüleyin.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0D1B2A">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <h2 class="nav-title">AppleFavour UDID</h2>
+        </div>
+    </nav>
+    
+    <div class="container-fluid">
+        <div class="alert alert-info profile-notice" role="alert">
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>Önemli:</strong> Cihaz bilgilerinizi görüntülemek için öncelikle "Profili İndir" butonuna tıklayıp profili cihazınıza yüklemeniz gerekmektedir.
+        </div>
+        
+        <main>
+            <section class="device-info-section">
+                <div class="app-card">
+                    <div class="card-header">
+                        <h2 class="card-title text-center">Cihaz Bilgileriniz</h2>
+                    </div>
+                    
+                    <form id="deviceInfoForm">
+                        <div class="mb-3">
+                            <label for="udid" class="form-label">UDID <small>(Benzersiz Cihaz Tanımlayıcı)</small></label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="udid" placeholder="UDID" disabled>
+                                <button class="btn btn-copy" type="button" data-field="udid">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="imei" class="form-label">IMEI</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="imei" placeholder="IMEI" disabled>
+                                <button class="btn btn-copy" type="button" data-field="imei">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="version" class="form-label">iOS Sürümü</label>
+                            <input type="text" class="form-control" id="version" placeholder="iOS Sürümü" disabled>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="model" class="form-label">Cihaz Modeli</label>
+                            <input type="text" class="form-control" id="model" placeholder="Cihaz Modeli" disabled>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="serial" class="form-label">Seri Numarası</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="serial" placeholder="Seri Numarası" disabled>
+                                <button class="btn btn-copy" type="button" data-field="serial">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button type="button" id="getUdidBtn" class="btn primary">
+                                <i class="fas fa-download me-2"></i>Profili İndir
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+            <section class="info-section">
+                <!-- UDID Nedir Section -->
+                <div class="app-card">
+                    <div class="card-header">
+                        <h2 class="section-title">UDID Nedir?</h2>
+                    </div>
+                    <p class="section-text">
+                        UDID (Benzersiz Cihaz Tanımlayıcı), Apple cihazınızı benzersiz şekilde tanımlayan 40 karakterlik bir alfanümerik koddur. 
+                        Bu kod, geliştirici hesaplarına cihaz kaydı, uygulama testleri ve cihaza özel yapılandırmalar için kullanılır.
+                    </p>
+                </div>
+                
+                <!-- Nasıl Kullanılır Section -->
+                <div class="app-card">
+                    <div class="card-header">
+                        <h2 class="section-title">UDID Bilgimi Nasıl Öğrenirim?</h2>
+                    </div>
+                    <ol class="usage-steps">
+                        <li><strong>"Profili İndir"</strong> butonuna tıklayın.</li>
+                        <li>Açılan profili <strong>yükleyin</strong> ve <strong>onaylayın</strong>.</li>
+                        <li>Profil yüklendikten sonra otomatik olarak bu sayfaya yönlendirileceksiniz.</li>
+                        <li>Cihaz bilgileriniz otomatik olarak görüntülenecektir.</li>
+                    </ol>
+                </div>
+                
+                <!-- Gizlilik Politikası Section -->
+                <div class="app-card">
+                    <div class="card-header">
+                        <h2 class="section-title">Gizlilik Politikamız</h2>
+                    </div>
+                    <p class="section-text">
+                        <i class="fas fa-shield-alt me-2"></i> AppleFavour olarak kişisel verilerinizin gizliliğine büyük önem veriyoruz. 
+                        Cihaz bilgileriniz hiçbir şekilde sunucularımızda saklanmamaktadır. Tüm veriler yalnızca tarayıcınızda görüntülenir ve 
+                        sayfayı kapattığınızda tamamen silinir. Hiçbir bilgi üçüncü taraflarla paylaşılmaz veya analiz amaçlı kullanılmaz.
+                    </p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="footer">
+                <p>AppleFavour tarafından <i class="fa-solid fa-heart"></i> ile yapıldı.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="copyToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                <i class="fas fa-check-circle me-2"></i>Kopyalandı!
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery and Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+</body>
+</html>
