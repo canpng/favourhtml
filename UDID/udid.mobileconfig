@@ -19,7 +19,7 @@
             <string>ECID</string>
          </array>
          <key>URL</key>
-         <string>https://applefavour.com/udid.php</string>
+         <string>https://canpng.github.io/favourhtml/UDID/udid.php</string>
       </dict>
       <key>PayloadOrganization</key>
       <string>AppleFavour UDID</string>
